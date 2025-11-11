@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [x] Create a branch called `assignment-one`.
-- [x] Ensure that the repository is public.
-- [x] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [x] Verify that the link is accessible in a private browser window.
+- [ ] Create a branch called `assignment-one`.
+- [ ] Ensure that the repository is public.
+- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [ ] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -108,10 +108,6 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 
 ***
 
-**LOGICAL DATA MODEL:**
-
-![Logical Data Model for booth and vendor_booth tables](./images/Part1.png)
-
 ## Section 2:
 You can start this section following *session 2*.
 
@@ -125,9 +121,6 @@ Steps to complete this part of the assignment:
 
 #### SELECT
 1. Write a query that returns everything in the customer table.
-
-_My answers for Section 2 are found in assignment1.sql file_
-
 2. Write a query that displays all of the columns and 10 rows from the customer table, sorted by customer_last_name, then customer_first_ name.
 
 <div align="center">-</div>
@@ -213,12 +206,4 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 ```
 Your thoughts...
-In my day-to-day life, there are many value systems being embedded in these databases and data systems. For example, in many databases we encounter, there is this expectectation of a “home address”, ignoring homeless individuals. Many systems also treat gender as a binary field (male/female), thereby forcing non-binary individuals into incorrect categories.
-
-A more personal example is my first name, which is Chinese and contains a space. I sometimes run into issues when typing my first name into online forms because some systems expect a first name to be a single, uninterrupted word. This small technical limitation reflects how databases are often designed with certain cultural assumptions built in, leaving little room for names that don’t fit Western naming conventions. 
-
-
-These contexts reflects the social values of its creators and these data systems are built on what counts as normal in their eyes. Recognizing fairness and inclusivity early in design allows them to accommodate more people instead of forcing everyone to fit a predefined category.
-
-
 ```
