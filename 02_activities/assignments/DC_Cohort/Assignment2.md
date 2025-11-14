@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [x] Create a branch called `assignment-two`.
+- [x] Ensure that the repository is public.
+- [x] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [x] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -45,17 +45,29 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+<img src="./images/bookstore_logical_model_prompt1.png" width="600">
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+<img src="./images/bookstore_logical_model_prompt2.png" width="600">
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
 
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
-```
-Your answer...
-```
+<ins>My Answer</ins>:
+
+Add a CUSTOMER_ADDRESS table linked to the CUSTOMER table via customer_id.
+
+Option 1 (Type 1 - Overwrite):
+When the customer updates their address, overwrite the existing address row for that customer_id. No extra columns are needed.
+
+Option 2 (Type 2 - Retain history):
+When the customer updates their address, insert a new row with the new address.
+Include additional columns such as valid_from and valid_to, or a version number, to distinguish these different historical records.
+Queries must filter for the specific or most updated version when needed.
 
 ***
 
@@ -185,3 +197,9 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 ```
 Your thoughts...
 ```
+
+<ins>My Answer</ins>:
+I think the ethical issues mentioned in this paper center around the invisible (and cheap) human labor that makes them possible. Although machine-learning models appear automated and also objective, they were built on humans (seemingly underpair) who label images and sorted this information to then go on and be used for training the models. This raises concerns about labour exploitation, since these workers are often underpaid and don't really get much of that massive revenue these companies get from their contributions.
+
+Also, because humans are doing this labelling, the training data also carries human bias. Decisions about how to categorize images can be impacted be varaibles like if the human just randomly clicked and submitted responses (just doing it quickly to get paid) as well as any cultural assumptions (maybe hotdogs mean something else when translated into another language for example). Those biases are then carried over into the trained models as well, which can thus cause issues with mis-labelling when the AI are deployed at larger scales.
+Users often see AI as neutral or autonomous, without bias, and thus do not know about the underlying human decision-making and labor behind them. It's important to note that AI systems are not just objective machines but are shaped by human choices. 
